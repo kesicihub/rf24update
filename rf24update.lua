@@ -14,7 +14,7 @@ local Mouse = Player:GetMouse()
 -- ================================================================
 --                    KEY SYSTEM ENTEGRASYONU
 -- ================================================================
-local DiscordLink = "https://discord.gg/S4c2vNSsVu"
+local DiscordLink = "https://discord.gg/ababtVNjTb"
 
 local currentExecutor = (identifyexecutor and identifyexecutor()) or "Unknown"
 if string.find(string.lower(currentExecutor), "xeno") then
