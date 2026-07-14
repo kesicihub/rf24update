@@ -14,7 +14,7 @@ local Mouse = Player:GetMouse()
 -- ================================================================
 --                    KEY SYSTEM ENTEGRASYONU
 -- ================================================================
-local DiscordLink = "https://discord.gg/ababtVNjTb"
+local DiscordLink = "https://discord.gg/S4c2vNSsVu"
 
 local currentExecutor = (identifyexecutor and identifyexecutor()) or "Unknown"
 if string.find(string.lower(currentExecutor), "xeno") then
@@ -298,6 +298,16 @@ local function CreateKeyUI()
     DiscordBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
     DiscordBtn.Parent = MainFrame
     Instance.new("UICorner", DiscordBtn).CornerRadius = UDim.new(0, 8)
+
+    local ManualLinkLbl = Instance.new("TextLabel")
+    ManualLinkLbl.Size = UDim2.new(0.9, 0, 0, 15)
+    ManualLinkLbl.Position = UDim2.new(0.05, 0, 0, 210)
+    ManualLinkLbl.BackgroundTransparency = 1
+    ManualLinkLbl.Text = "Hata alırsan manuel katıl: discord.gg/S4c2vNSsVu"
+    ManualLinkLbl.Font = Enum.Font.Gotham
+    ManualLinkLbl.TextSize = 11
+    ManualLinkLbl.TextColor3 = Color3.fromRGB(180, 180, 180)
+    ManualLinkLbl.Parent = MainFrame
 
     local StatusLabel = Instance.new("TextLabel")
     StatusLabel.Size = UDim2.new(0.9, 0, 0, 20)
@@ -953,7 +963,7 @@ local function MakeSection(page,name)
 			TD.Size=UDim2.new(1,-68,0,14);TD.Position=UDim2.new(0,14,0,31);TD.ZIndex=7;TD.Parent=BF
 		end
 		local Ico=Instance.new("TextLabel");Ico.Text=">";Ico.Font=Enum.Font.GothamBold;Ico.TextSize=16
-		Ico.TextColor3=T.Text2;Ico.BackgroundTransparency=1;Ico.Size=UDim2.new(0,20,0,20)
+		Ico.TextColor3=T.Text2;BackgroundTransparency=1;Ico.Size=UDim2.new(0,20,0,20)
 		Ico.Position=UDim2.new(1,-30,0.5,-10);Ico.ZIndex=7;Ico.Parent=BF
 
 		BF.MouseEnter:Connect(function() Tw(BF,0.1,{BackgroundTransparency=0.05,BackgroundColor3=T.CardHover}) end)
@@ -1047,7 +1057,7 @@ local function Notify(c)
 	NT2.Size=UDim2.new(1,-50,0,16);NT2.Position=UDim2.new(0,44,0,12);NT2.ZIndex=32;NT2.Parent=NF
 	local NC2=Instance.new("TextLabel");NC2.Text=nC;NC2.Font=Enum.Font.Gotham;NC2.TextSize=11
 	NC2.TextColor3=T.Text2;NC2.TextXAlignment=Enum.TextXAlignment.Left;NC2.BackgroundTransparency=1
-	NC2.Size=UDim2.new(1,-50,0,26);NC2.Position=UDim2.new(0,44,0,30);NC2.ZIndex=32;NT2.Parent=NF
+	NC2.Size=UDim2.new(1,-50,0,26);NC2.Position=UDim2.new(0,44,0,30);NC2.ZIndex=32;NC2.Parent=NF
 	TwB(NF,0.4,{Size=UDim2.new(1,0,0,64)})
 	task.delay(nD,function()
 		Tw(NF,0.3,{Size=UDim2.new(1,0,0,0)})
@@ -1430,10 +1440,10 @@ local DiscordSec = MakeSection(MiscPage, "💬 Discord")
 
 DiscordSec:AddButton({
 	Name = "Join Our Server",
-	Description = "Click to copy invite link: discord.gg/ababtVNjTb",
+	Description = "Click to copy invite link: discord.gg/S4c2vNSsVu",
 	Callback = function()
-		if safeCopy("https://discord.gg/ababtVNjTb") then
-			Notify({Title = "Discord", Content = "Link copied to clipboard!", Duration = 3, Type = "Success"})
+		if safeCopy("https://discord.gg/S4c2vNSsVu") then
+			Notify({Title = "Discord", Content = "Linki yeniledik!", Duration = 3, Type = "Success"})
 		else
 			Notify({Title = "Error", Content = "Copy failed. Please manually copy the link in description!", Duration = 3, Type = "Error"})
 		end
