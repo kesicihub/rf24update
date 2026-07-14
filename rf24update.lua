@@ -299,17 +299,6 @@ local function CreateKeyUI()
     DiscordBtn.Parent = MainFrame
     Instance.new("UICorner", DiscordBtn).CornerRadius = UDim.new(0, 8)
 
-    -- EKLENEN KISIM: MANUEL DİSCORD LİNKİ BİLGİLENDİRMESİ
-    local ManualLinkLbl = Instance.new("TextLabel")
-    ManualLinkLbl.Size = UDim2.new(0.9, 0, 0, 15)
-    ManualLinkLbl.Position = UDim2.new(0.05, 0, 0, 210)
-    ManualLinkLbl.BackgroundTransparency = 1
-    ManualLinkLbl.Text = "Hata alırsan manuel katıl: discord.gg/S4c2vNSsVu"
-    ManualLinkLbl.Font = Enum.Font.Gotham
-    ManualLinkLbl.TextSize = 11
-    ManualLinkLbl.TextColor3 = Color3.fromRGB(180, 180, 180)
-    ManualLinkLbl.Parent = MainFrame
-
     local StatusLabel = Instance.new("TextLabel")
     StatusLabel.Size = UDim2.new(0.9, 0, 0, 20)
     StatusLabel.Position = UDim2.new(0.05, 0, 0, 225)
@@ -899,7 +888,7 @@ local function MakeSection(page,name)
 
 		if desc then
 			local SD2=Instance.new("TextLabel");SD2.Text=desc;SD2.Font=Enum.Font.Gotham;SD2.TextSize=11
-			SD2.TextColor3=T.Text3;SD2.TextXAlignment=Enum.TextXAlignment.Left;TD.BackgroundTransparency=1
+			SD2.TextColor3=T.Text3;SD2.TextXAlignment=Enum.TextXAlignment.Left;SD2.BackgroundTransparency=1
 			SD2.Size=UDim2.new(0.55,0,0,14);SD2.Position=UDim2.new(0,14,0,27);SD2.ZIndex=7;SD2.Parent=SF2
 		end
 		local VL=Instance.new("TextLabel");VL.Text=tostring(val)..sfx;VL.Font=Enum.Font.GothamBold
@@ -1441,10 +1430,10 @@ local DiscordSec = MakeSection(MiscPage, "💬 Discord")
 
 DiscordSec:AddButton({
 	Name = "Join Our Server",
-	Description = "Click to copy invite link: discord.gg/S4c2vNSsVu",
+	Description = "Click to copy invite link: discord.gg/ababtVNjTb",
 	Callback = function()
-		if safeCopy("https://discord.gg/S4c2vNSsVu") then
-			Notify({Title = "Discord", Content = "Link Updated!", Duration = 3, Type = "Success"})
+		if safeCopy("https://discord.gg/ababtVNjTb") then
+			Notify({Title = "Discord", Content = "Link copied to clipboard!", Duration = 3, Type = "Success"})
 		else
 			Notify({Title = "Error", Content = "Copy failed. Please manually copy the link in description!", Duration = 3, Type = "Error"})
 		end
